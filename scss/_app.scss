@@ -1,0 +1,180 @@
+@charset "utf-8";
+@import "reset";
+@import "variables";
+
+
+// Títulos do site
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: .8em;
+  margin-bottom: 10px;
+}
+
+
+//Header
+header {
+  width: 100%;
+  background: url(../../images/triangulos.svg);
+  background-position: center;
+  background-size: cover;
+
+  .nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', verdana, Helvetica, sans-serif;
+    padding: 20px 0;
+
+    .logo {
+      font-size: 1.3em;
+
+      img {
+        max-width: 60%;
+      }
+
+      a {
+        color: $branco;
+        transition: 0.2s ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+          color: darken($branco, 20%);
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      z-index: 20;
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: $branco;
+        text-decoration: none;
+        font-size: .9em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          color: darken($branco, 20%);
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+
+    .burger {
+      display: none;
+    }
+
+    .burger div {
+      width: 25px;
+      height: 3px;
+      margin: 5px;
+      background: $branco;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+/* Slider */
+.slider {
+  padding: 60px 0;
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $branco;
+   // margin-left: 5%;
+
+    section {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+
+      h1 {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      p {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+
+      }
+
+      .button {
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+
+    figure {
+      width: 50%;
+      margin: 0 auto;
+
+      img {
+        max-width: 70%;
+        margin: auto;
+      }
+    }
+
+  }
+
+
+  .owl-theme .owl-item div:hover {
+    cursor: move;
+  }
+
+  /*PAGINACAO */
+
+  .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    display: inline;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: $preto;
+    display: block;
+    border-radius: 30px
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: $cinza;
+  }
+}
